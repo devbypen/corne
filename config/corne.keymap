@@ -42,6 +42,28 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
+/*
+ * Hardware tweaks. These live here because ZMK does not load config/corne.overlay
+ * for the corne_left/corne_right shields, but it always applies this keymap.
+ */
+
+// Use the 5 column layout, and disable the 6 column one so a layout index saved
+// by ZMK Studio (synced from left to right half) can never re-select it.
+/ {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+};
+
+&foostan_corne_6col_layout {
+    status = "disabled";
+};
+
+// RGB underglow is defined by the stock corne shield; 27 LEDs per half.
+&led_strip {
+    chain-length = <27>;
+};
+
 &mmv {
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <1500>;
