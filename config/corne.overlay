@@ -14,6 +14,15 @@
 	};
 };
 
+/*
+ * Keep only the 5 column layout. Otherwise a layout index saved by ZMK Studio
+ * (and synced from the left half to the right half) can re-select the
+ * 6 column layout, which shifts every key by one position.
+ */
+&foostan_corne_6col_layout {
+	status = "disabled";
+};
+
 /* RGB Underglow - SPI */
 &pinctrl {
 	spi3_default: spi3_default {
