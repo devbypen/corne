@@ -232,8 +232,9 @@ U_NA          &kp RALT    &u_to_fun     &u_to_media   U_NA       &u_out_tog     
 
         num_layer {
             display-name = "Num";
+            // Right top-left (j on Base) is Ctrl+Space, the tmux prefix
             bindings = <
-&kp LBKT    &kp N7   &kp N8      &kp N9      &kp RBKT      U_NA   &u_to_base   &u_to_extra   &u_to_tap   &bootloader
+&kp LBKT    &kp N7   &kp N8      &kp N9      &kp RBKT      &kp LC(SPACE)   &u_to_base   &u_to_extra   &u_to_tap   &bootloader
 &kp SEMI    &kp N4   &kp N5      &kp N6      &kp EQUAL     U_NA   &kp LSHFT    &kp LCTRL     &kp LALT    &kp LGUI
 &kp GRAVE   &kp N1   &kp N2      &kp N3      &kp BSLH      U_NA   &u_to_num    &u_to_nav     &kp RALT    U_NA
                      &kp DOT     &kp N0      &kp MINUS     U_NA   U_NA         U_NA
